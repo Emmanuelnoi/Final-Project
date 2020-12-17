@@ -39,3 +39,10 @@ University campus bookstores play an essential role in supporting the academic a
 <li>Bootstrap 1.5.3</li>
 <li>Spring Boot 4.7.2 release</li>
 
+## RESOURCES USED
+<li>[JAVA DOCUMENTATION](https://docs.oracle.com/en/java/)</li>
+<li>[ANGULAR DOCUMENTATION](https://angular.io/docs)</li>
+<li>[SPRING BOOT REFERENCE DOCUMENTATION](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)</li>
+<li>[NODE JS DOCUMENTATION](https://nodejs.org/en/docs/)</li>
+
+
