@@ -34,3 +34,8 @@ University campus bookstores play an essential role in supporting the academic a
 # npm start   //Start frontend
 # src/assets    
 ``` 
+## STACKS USED
+<li>Angular/CLI 10.1.7</li>
+<li>Bootstrap 1.5.3</li>
+<li>Spring Boot 4.7.2 release</li>
+
