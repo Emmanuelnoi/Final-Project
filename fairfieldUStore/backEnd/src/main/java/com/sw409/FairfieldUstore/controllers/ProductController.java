@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sw409.FairfieldUstore.models.Product;
 import com.sw409.FairfieldUstore.services.ProductService;
-
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -19,7 +18,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping(value = { "", "/" })
+    @GetMapping(value = { "","/" })
     public @NotNull Iterable<Product> getProducts() {
         return productService.getAllProducts();
     }
