@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sw409.FairfieldUstore.models.Product;
 import com.sw409.FairfieldUstore.services.ProductService;
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("api/v1/getAllProducts")
 public class ProductController {
 
     private ProductService productService;

@@ -28,7 +28,7 @@ import com.sw409.FairfieldUstore.services.OrderService;
 import com.sw409.FairfieldUstore.services.ProductService;
 
 @RestController
-@RequestMapping("/api/orders")
+@RequestMapping("api/v1/getAllOrders")
 public class OrderController {
 
 	ProductService productService;

@@ -24,11 +24,11 @@ public class ConnectionPool implements Runnable{
 	private static final String PASSWORD = "hermosillo";
 	
 	
-	//---------------LOCALHOST------------------------------
+//	//---------------LOCALHOST------------------------------
 //		private static final String URL = "jdbc:mysql://localhost:3306/fairfieldustore?serverTimezone=UTC";
 //		private static final String USERNAME = "root";
 //		private static final String PASSWORD = "Br1s@7nz";
-	
+//	
 	
 	private static final Logger log = LogManager.getLogger(ConnectionPool.class);
 	
