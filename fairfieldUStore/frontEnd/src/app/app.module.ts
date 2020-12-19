@@ -1,15 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreComponent } from './store/store.component';
-import { ProductsComponent } from './store/products/products.component';
-import { OrdersComponent } from './store/orders/orders.component';
-import { ShoppingCartComponent } from './store/shopping-cart/shopping-cart.component';
-import {StoreService} from './store/services/StoreService';
-import {HttpClientModule} from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {StoreService} from './services/StoreService';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import {AppRoutingModule} from './app-routing.module';
+import {ErrorInterceptor} from './helper/error.interceptor';
+import {JwtInterceptor} from './helper/jwt.interceptor';
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     StoreComponent,
     ProductsComponent,
     OrdersComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [StoreService],
+  providers: [StoreService,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
